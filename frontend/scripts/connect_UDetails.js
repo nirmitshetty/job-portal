@@ -9,6 +9,7 @@ function postProfile(){
 	var element_g = document.getElementById("gender").value;
 	var element_d = document.getElementById("disability").value;
 	var element_year = document.getElementById("year").value;
+	var element_cyear = document.getElementById("cyear").value;
 	var element_major = document.getElementById("major").value;
 	var element_v = document.getElementById("veteran").value;
 	var element_we = document.getElementById("work").value;
@@ -21,7 +22,7 @@ let payload = { uci_netid : element_id,
             first_name : element_fname,
             last_name: element_lname,
             major: element_major,
-            year : element_year,
+            year : element_cyear,
             graduation_year : element_year,
             gender : element_g,
            // sex : element_g,
