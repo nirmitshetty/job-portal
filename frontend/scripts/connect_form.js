@@ -32,18 +32,18 @@ let payload = { uci_netid : element_id,
             ethinicity : race_dropdown_container
         };
 
-console.log('element_name');
+console.log('element_fname');
 //let res = await axios.post('http://127.0.0.1:5000/profile/', payload);
 
 axios({
-    url : 'http://127.0.0.1:5000/save/',
+    url : 'http://127.0.0.1:5000/createProfile/',
     method : 'POST',
     data : payload
 })
     .then(() =>{
         console.log('Data sent to server');
     })
-    .catch(()=>{
+    .catch(()=>{z
         console.log('Internal server error !!');
     });;
 
