@@ -1,6 +1,7 @@
 function myfunction(){
 
     var element = document.getElementById("txtuser").value;
+
     if (element!=null){
     var base ='http://127.0.0.1:5000/userExists/'
     axios.get(base+element)
@@ -12,7 +13,7 @@ function myfunction(){
                  console.log(readCookie('uci_netid'))
             }
             else{
-                window.location.href="form.html";
+                window.location.href="UDetails.html";
                 console.log(readCookie('uci_netid'))
             }
 
