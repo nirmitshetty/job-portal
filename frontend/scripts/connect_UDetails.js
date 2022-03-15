@@ -14,7 +14,6 @@ function postProfile(){
 	var element_v = document.getElementById("veteran").value;
 	var element_we = document.getElementById("work").value;
 	var element_skills = document.getElementById("skills").value;
-	var element_wa = document.getElementById("work_authorisation").value;
 	var element_race = document.getElementById("race_dropdown_container").value;
 	var element_work_sponsorship=document.getElementById("work_sponsorship").value;
 //    console.log(element_year);
