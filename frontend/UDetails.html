@@ -2,10 +2,45 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<body style="background-color:#ADD8E6;">
+<html>
+<style>
+input[type=text], select {
+  width: 20%;
+  padding: 4px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  box-sizing: border-box;
+}
 
-    <div id='application' class="">
-        <div id='main_fields'>
+input[type=submit] {
+  width: 20%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 1px;
+  background-color: #ADD8E6;
+  padding: 5px;
+}
+</style>
+<body>
+
+<body style="background-color: #f2f2f2;">
+
+    <div id='application' class="" >
+        <div id='main_fields' >
             <h2 class='heading'>User Details</h2>
 
           <div class='clear'></div>
@@ -13,7 +48,7 @@
             <form method="post" action="/post-form" onsubmit="this.form_submit">
 
 <div class='field' >
-  <label for='uci_id'>uci_id<span class='asterisk' aria-hidden='true' >*</span></label>
+  <label for='uci_id'>UCI NET ID<span class='asterisk' aria-hidden='true' >*</span></label>
   <br><input type='text' id='uci_id' name='job_application[uci_id]' aria-required="true" maxlength="255" autocomplete="uci_id" required/>
 </div>
 <div class='field'>
