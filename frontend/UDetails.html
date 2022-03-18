@@ -108,7 +108,8 @@
             value='Submit Application'
             id='submit_app'
             class='button'
-          onclick = "myfunc()">
+          formaction= "http://localhost:63342/job-portal2/frontend/profile.html"
+            onsubmit="postProfile()">
         </div>
 </form>    </div>
 </div>
@@ -116,12 +117,7 @@
     </div>
 <br>
 
-    <script>
-    function myfunc() {
-        postProfile();
-        location.href = 'profile.html';
-    };
-</script>
+
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="./scripts/connect_UDetails.js"></script>

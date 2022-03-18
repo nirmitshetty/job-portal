@@ -34,7 +34,7 @@ function getProfile(){
 
 
 axios({
-    url : 'http://127.0.0.1:5000//profile/<element_id>/',
+    url : 'http://127.0.0.1:5000//profile/ankitas4/',
     method : 'GET',
     data : payload
 })
