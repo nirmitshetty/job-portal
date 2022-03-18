@@ -1,6 +1,6 @@
 
 function getProfile(){
-    var element_id = document.getElementById("uci_netid").value;
+    var element_id = document.getElementById("uci_id").value;
 	var element_fname = document.getElementById("first_name").value;
 	var element_lname = document.getElementById("last_name").value;
 	var element_g = document.getElementById("gender").value;
