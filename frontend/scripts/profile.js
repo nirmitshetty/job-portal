@@ -1,7 +1,7 @@
 var user;
 
 $(document).ready(auth);
-alert("Reload");
+//alert("Reload");
 function formAction()
 {
 
@@ -37,13 +37,13 @@ function save()
 
 function postProfile(){
 
-  const axios = require('axios');
-  var element_id = document.getElementById("uci_netid").value;
+  var element_id = readCookie('uci_netid');
   var element_fname = document.getElementById("first_name").value;
   var element_lname = document.getElementById("last_name").value;
   var element_g = document.getElementById("gender").value;
   var element_d = document.getElementById("disability").value;
-  var element_year = document.getElementById("year").value;
+  var element_cyear = document.getElementById("year").value;
+  var element_gyear = document.getElementById("grad_year").value;
   var element_major = document.getElementById("major").value;
   var element_v = document.getElementById("veteran").value;
   var element_we = document.getElementById("work").value;
@@ -51,12 +51,23 @@ function postProfile(){
   var element_wa = document.getElementById("work_auth").value;
   var element_race = document.getElementById("race_dropdown_container").value;
 
-    let payload = { uci_netid : element_id, first_name : element_fname, last_name: element_lname, major: element_major, year : element_year, gender : element_g, sex : element_g, disability : element_d,
-                     veteran : element_v, work_ex : element_we, skills : element_skills, work_auth : element_wa, grad_date : element_year, ethinicity : element_race};
-  let res = await axios.post('http://127.0.0.1:5000/profile/', payload);
+  let payload = { uci_netid : element_id,
+            first_name : element_fname,
+            last_name: element_lname,
+            major: element_major,
+            year : element_cyear,
+            graduation_year : element_gyear,
+            gender : element_g,
+            race : element_race,
+            disability : element_d,
+            veteran : element_v,
+            work_experience : element_we,
+            skills : element_skills,
+            work_sponsorship : element_wa,
+        };
 
-  let data = res.data;
-  console.log(data);
+  console.log(payload);
+
   $.ajax({
     type: "POST",
     url: "http://127.0.0.1:5000/createProfile",
@@ -68,6 +79,7 @@ function postProfile(){
 
   }
   });
+
 }
 
 function cancel()
@@ -96,7 +108,7 @@ function changeReadOnly(bool)
 }
 
 function auth(){
-
+  //alert("called");
   user=readCookie('uci_netid');
   console.log(user);
   if (user===null)
@@ -129,7 +141,6 @@ function fetchProfile(user)
 
 function populateTable(data)
 {
-
   //console.log(data);
   document.getElementById("first_name").value=data["first_name"];
   document.getElementById("last_name").value=data['last_name'];

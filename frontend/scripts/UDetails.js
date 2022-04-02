@@ -22,13 +22,11 @@ function postProfile(){
             year : element_cyear,
             graduation_year : element_year,
             gender : element_g,
-           // sex : element_g,
             race : element_race,
             disability : element_d,
             veteran : element_v,
             work_experience : element_we,
             skills : element_skills,
-            //work_auth : element_wa,
             work_sponsorship : element_work_sponsorship,
         };
 

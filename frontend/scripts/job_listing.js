@@ -33,6 +33,8 @@ function getUniqueValuesFromColumn() {
 
     });
 
+    //console.log(unique_col_values_dict);
+
     updateSelectOptions(unique_col_values_dict)
 
 };
@@ -118,7 +120,7 @@ function fetch()
       row=document.createElement("tr");
       for(var key in result[i])
       {
-        
+
         cell=document.createElement("td");
         cell.innerHTML=result[i][key];
         row.appendChild(cell);

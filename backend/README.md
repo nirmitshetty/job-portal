@@ -9,7 +9,7 @@ To run the backend flask APIs,
 
 # Database
 
-To access the current db, connect us.
+To get access to the existing db, connect with us.
 
 Export collections from the db:
 https://www.mongodb.com/docs/compass/current/import-export/
